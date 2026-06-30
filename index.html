@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DDEV GUI</title>
+    <link rel="stylesheet" href="/src/styles.css" />
+  </head>
+  <body>
+    <header class="app-bar">
+      <div class="app-title">
+        <span class="logo" aria-hidden="true">◆</span>
+        <span>DDEV GUI</span>
+      </div>
+      <div class="app-bar-actions">
+        <span id="summary" class="summary"></span>
+        <button id="refresh-btn" class="btn btn-ghost" title="Refresh (manual)">⟳ Refresh</button>
+        <button id="prefs-btn" class="btn btn-ghost" title="Preferences">⚙</button>
+      </div>
+    </header>
+
+    <main id="content">
+      <div id="state-banner" class="banner hidden"></div>
+      <ul id="project-list" class="project-list"></ul>
+      <div id="empty-state" class="empty hidden"></div>
+    </main>
+
+    <dialog id="prefs-dialog" class="prefs-dialog">
+      <form method="dialog">
+        <h2>Preferences</h2>
+        <label class="pref-row">
+          <input type="checkbox" id="pref-notifications" />
+          <span>Desktop notifications</span>
+        </label>
+        <label class="pref-row">
+          <input type="checkbox" id="pref-autostart" />
+          <span>Start on login (minimized to tray)</span>
+        </label>
+        <label class="pref-row">
+          <span>Auto-refresh interval (seconds)</span>
+          <input type="number" id="pref-interval" min="2" max="60" step="1" />
+        </label>
+        <menu class="prefs-actions">
+          <button value="cancel" class="btn btn-ghost">Close</button>
+        </menu>
+      </form>
+    </dialog>
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

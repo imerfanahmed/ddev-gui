@@ -1,0 +1,155 @@
+{
+  "level": "info",
+  "msg": "\u250c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2510\n\u2502 Project: agora.community ~/Desktop/agora.studio/agora.community https://agora.community.ddev. \u2502\n\u2502 site                                                                                          \u2502\n\u2502 Docker platform: linux-docker                                                                 \u2502\n\u2502 Router: traefik                                                                               \u2502\n\u2502 DDEV version: v1.25.2                                                                         \u2502\n\u251c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u252c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u252c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u252c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2524\n\u2502 SERVICE      \u2502 STAT    \u2502 URL/PORT                                        \u2502 INFO               \u2502\n\u251c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u253c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u253c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u253c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2524\n\u2502 web          \u2502 OK      \u2502 https://agora.community.ddev.site               \u2502 laravel PHP 8.4    \u2502\n\u2502              \u2502         \u2502 InDocker -> Host:                               \u2502 Server: nginx-fpm  \u2502\n\u2502              \u2502         \u2502  - web:80 -> 127.0.0.1:32769                    \u2502 Docroot: 'public'  \u2502\n\u2502              \u2502         \u2502  - web:443 -> 127.0.0.1:32770                   \u2502 Perf mode: none    \u2502\n\u2502              \u2502         \u2502  - web:8025 -> 127.0.0.1:32773                  \u2502 Node.js: 24        \u2502\n\u251c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u253c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u253c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u253c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2524\n\u2502 db           \u2502 OK      \u2502 InDocker -> Host:                               \u2502 mariadb:10.11      \u2502\n\u2502              \u2502         \u2502  - db:3306 -> 127.0.0.1:32772                   \u2502 User/Pass: 'db/db' \u2502\n\u2502              \u2502         \u2502                                                 \u2502 or 'root/root'     \u2502\n\u251c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u253c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u253c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u253c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2524\n\u2502 phpmyadmin   \u2502 OK      \u2502 https://agora.community.ddev.site:8037          \u2502                    \u2502\n\u2502              \u2502         \u2502 InDocker:                                       \u2502                    \u2502\n\u2502              \u2502         \u2502  - phpmyadmin:80                                \u2502                    \u2502\n\u251c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u253c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u253c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u253c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2524\n\u2502 redis        \u2502 OK      \u2502 InDocker:                                       \u2502 Pass: <none>       \u2502\n\u2502              \u2502         \u2502  - redis:6379                                   \u2502                    \u2502\n\u2502              \u2502         \u2502 Backend: redis:7                                \u2502                    \u2502\n\u251c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u253c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u253c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u253c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2524\n\u2502 xhgui        \u2502 stopped \u2502 https://agora.community.ddev.site:8142          \u2502                    \u2502\n\u2502              \u2502         \u2502 InDocker:                                       \u2502                    \u2502\n\u2502              \u2502         \u2502  - xhgui:80                                     \u2502                    \u2502\n\u2502              \u2502         \u2502 Launch: ddev xhgui                              \u2502                    \u2502\n\u251c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u253c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u253c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u253c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2524\n\u2502 Mailpit      \u2502         \u2502 Mailpit: https://agora.community.ddev.site:8026 \u2502                    \u2502\n\u2502              \u2502         \u2502 Launch: ddev mailpit                            \u2502                    \u2502\n\u251c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u253c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u253c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u253c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2524\n\u2502 Project URLs \u2502         \u2502 https://agora.community.ddev.sit                \u2502                    \u2502\n\u2502              \u2502         \u2502 e, https://127.0.0.1:32770,                     \u2502                    \u2502\n\u2502              \u2502         \u2502 http://agora.community.ddev.site                \u2502                    \u2502\n\u2502              \u2502         \u2502 , http://127.0.0.1:32769                        \u2502                    \u2502\n\u2514\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2534\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2534\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2534\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2518\n",
+  "raw": {
+    "approot": "/home/erfan/Desktop/agora.studio/agora.community",
+    "database_type": "mariadb",
+    "database_version": "10.11",
+    "dbimg": "ddev/ddev-dbserver-mariadb-10.11:v1.25.2",
+    "dbinfo": {
+      "database_type": "mariadb",
+      "database_version": "10.11",
+      "dbPort": "3306",
+      "dbname": "db",
+      "host": "db",
+      "password": "db",
+      "published_port": 32772,
+      "username": "db"
+    },
+    "docroot": "public",
+    "fail_on_hook_fail": false,
+    "hostname": "agora.community.ddev.site",
+    "hostnames": [
+      "agora.community.ddev.site"
+    ],
+    "httpURLs": [
+      "http://agora.community.ddev.site",
+      "http://127.0.0.1:32769"
+    ],
+    "httpsURLs": [
+      "https://agora.community.ddev.site",
+      "https://127.0.0.1:32770"
+    ],
+    "httpsurl": "https://agora.community.ddev.site",
+    "httpurl": "http://agora.community.ddev.site",
+    "mailpit_https_url": "https://agora.community.ddev.site:8026",
+    "mailpit_url": "http://agora.community.ddev.site:8025",
+    "mutagen_enabled": false,
+    "name": "agora.community",
+    "nodejs_version": "24",
+    "performance_mode": "none",
+    "php_version": "8.4",
+    "primary_url": "https://agora.community.ddev.site",
+    "router": "traefik",
+    "router_disabled": false,
+    "router_http_port": "80",
+    "router_https_port": "443",
+    "router_status": "healthy",
+    "router_status_log": "container was previously healthy, so sleeping 59 seconds before continuing healthcheck... OK: http://:10999/ping",
+    "services": {
+      "db": {
+        "describe-info": "",
+        "describe-url-port": "",
+        "exposed_ports": "3306",
+        "full_name": "ddev-agora.community-db",
+        "host_ports": "32772",
+        "host_ports_mapping": [
+          {
+            "exposed_port": "3306",
+            "host_port": "32772"
+          }
+        ],
+        "image": "ddev/ddev-dbserver-mariadb-10.11:v1.25.2",
+        "short_name": "db",
+        "status": "running"
+      },
+      "phpmyadmin": {
+        "describe-info": "",
+        "describe-url-port": "",
+        "exposed_ports": "80",
+        "full_name": "ddev-agora.community-phpmyadmin",
+        "host_ports": "",
+        "host_ports_mapping": [],
+        "http_url": "http://agora.community.ddev.site:8036",
+        "https_url": "https://agora.community.ddev.site:8037",
+        "image": "phpmyadmin:5",
+        "short_name": "phpmyadmin",
+        "status": "running",
+        "virtual_host": "agora.community.ddev.site"
+      },
+      "redis": {
+        "describe-info": "Pass: <none>",
+        "describe-url-port": "Backend: redis:7",
+        "exposed_ports": "6379",
+        "full_name": "ddev-agora.community-redis",
+        "host_ports": "",
+        "host_ports_mapping": [],
+        "image": "redis:7",
+        "short_name": "redis",
+        "status": "running"
+      },
+      "web": {
+        "describe-info": "",
+        "describe-url-port": "",
+        "exposed_ports": "80,443,8025",
+        "full_name": "ddev-agora.community-web",
+        "host_http_url": "http://127.0.0.1:32769",
+        "host_https_url": "https://127.0.0.1:32770",
+        "host_ports": "32769,32770,32773",
+        "host_ports_mapping": [
+          {
+            "exposed_port": "80",
+            "host_port": "32769"
+          },
+          {
+            "exposed_port": "443",
+            "host_port": "32770"
+          },
+          {
+            "exposed_port": "8025",
+            "host_port": "32773"
+          }
+        ],
+        "http_url": "http://agora.community.ddev.site",
+        "https_url": "https://agora.community.ddev.site",
+        "image": "ddev/ddev-webserver:v1.25.2",
+        "short_name": "web",
+        "status": "running",
+        "virtual_host": "agora.community.ddev.site"
+      },
+      "xhgui": {
+        "describe-info": "",
+        "describe-url-port": "Launch: ddev xhgui",
+        "exposed_ports": "80",
+        "full_name": "ddev-agora.community-xhgui",
+        "host_ports": "",
+        "host_ports_mapping": [],
+        "http_url": "http://agora.community.ddev.site:8143",
+        "https_url": "https://agora.community.ddev.site:8142",
+        "image": "ddev/ddev-xhgui:v1.25.2",
+        "short_name": "xhgui",
+        "status": "stopped",
+        "virtual_host": "agora.community.ddev.site"
+      }
+    },
+    "shortroot": "~/Desktop/agora.studio/agora.community",
+    "ssh_agent_status": "healthy",
+    "status": "running",
+    "status_desc": "running",
+    "type": "laravel",
+    "urls": [
+      "https://agora.community.ddev.site",
+      "https://127.0.0.1:32770",
+      "http://agora.community.ddev.site",
+      "http://127.0.0.1:32769"
+    ],
+    "webimg": "ddev/ddev-webserver:v1.25.2",
+    "webserver_type": "nginx-fpm",
+    "xdebug_enabled": false,
+    "xhgui_https_url": "https://agora.community.ddev.site:8142",
+    "xhgui_status": "disabled",
+    "xhgui_url": "http://agora.community.ddev.site:8143",
+    "xhprof_mode": "xhgui"
+  },
+  "time": "2026-07-01T00:12:48+01:00"
+}
