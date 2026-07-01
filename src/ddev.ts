@@ -75,7 +75,47 @@ export function setPrefs(prefs: Prefs): Promise<void> {
   return invoke("set_prefs", { prefs });
 }
 
+export function openSsh(name: string, approot: string): Promise<void> {
+  return invoke("open_ssh", { name, approot });
+}
+
+export function saveProjectConfig(
+  approot: string,
+  phpVersion: string,
+  database: string,
+  xdebugEnabled: boolean,
+  nodejsVersion: string,
+  webserverType: string
+): Promise<void> {
+  return invoke("save_project_config", {
+    approot,
+    phpVersion,
+    database,
+    xdebugEnabled,
+    nodejsVersion,
+    webserverType,
+  });
+}
+
 /** Whether the tray indicator could be created at startup. */
 export function trayAvailable(): Promise<boolean> {
   return invoke("tray_available");
 }
+
+export interface ContainerInfo {
+  id: string;
+  name: string;
+  status: string;
+  image: string;
+  cpuPerc: string;
+  memUsage: string;
+  memPerc: string;
+  netIo: string;
+  blockIo: string;
+  pids: string;
+}
+
+export function getProjectContainers(name: string): Promise<ContainerInfo[]> {
+  return invoke("get_project_containers", { name });
+}
+

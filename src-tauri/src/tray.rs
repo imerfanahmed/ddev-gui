@@ -58,6 +58,17 @@ fn build_menu(app: &AppHandle, projects: &[Project]) -> tauri::Result<Menu<Wry>>
                 )?);
             }
 
+            // Quick SSH into the container only when running.
+            if p.status == ProjectStatus::Running {
+                sub = sub.item(&MenuItem::with_id(
+                    app,
+                    format!("ssh::{}", p.name),
+                    "SSH",
+                    true,
+                    None::<&str>,
+                )?);
+            }
+
             builder = builder.item(&sub.build()?);
         }
     }
@@ -173,6 +184,8 @@ fn handle_menu_event(app: &AppHandle, event: tauri::menu::MenuEvent) {
                 spawn_tray_lifecycle(app.clone(), name.to_string(), Lifecycle::Stop);
             } else if let Some(name) = other.strip_prefix("open::") {
                 open_site(app, name);
+            } else if let Some(name) = other.strip_prefix("ssh::") {
+                open_ssh_from_tray(app, name);
             }
         }
     }
@@ -182,6 +195,25 @@ fn spawn_tray_lifecycle(app: AppHandle, name: String, action: Lifecycle) {
     std::thread::spawn(move || {
         let _ = commands::run_lifecycle_blocking(&app, &name, action);
     });
+}
+
+fn open_ssh_from_tray(app: &AppHandle, name: &str) {
+    let approot = app
+        .try_state::<AppState>()
+        .and_then(|state| {
+            state
+                .projects
+                .lock()
+                .unwrap()
+                .iter()
+                .find(|p| p.name == name)
+                .map(|p| p.approot.clone())
+        })
+        .unwrap_or_default();
+
+    if !approot.is_empty() {
+        let _ = commands::open_ssh(name.to_string(), approot);
+    }
 }
 
 fn handle_tray_event(tray: &tauri::tray::TrayIcon, event: TrayIconEvent) {

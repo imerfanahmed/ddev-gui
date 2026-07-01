@@ -85,6 +85,9 @@ pub fn run() {
             commands::get_prefs,
             commands::set_prefs,
             commands::tray_available,
+            commands::open_ssh,
+            commands::save_project_config,
+            commands::get_project_containers,
         ])
         .run(tauri::generate_context!())
         .expect("error while running DDEV GUI");

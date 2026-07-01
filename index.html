@@ -21,8 +21,98 @@
 
     <main id="content">
       <div id="state-banner" class="banner hidden"></div>
-      <ul id="project-list" class="project-list"></ul>
-      <div id="empty-state" class="empty hidden"></div>
+      
+      <div class="split-layout">
+        <!-- Left Panel: Project List -->
+        <div class="left-panel">
+          <ul id="project-list" class="project-list"></ul>
+          <div id="empty-state" class="empty hidden"></div>
+        </div>
+
+        <!-- Right Panel: Project Details & Monitor -->
+        <div id="details-view" class="right-panel">
+          <div id="details-placeholder" class="details-placeholder">
+            <span class="placeholder-icon">◆</span>
+            <p>Select a project from the list to view its resource usage and details.</p>
+          </div>
+
+          <div id="details-content" class="details-content hidden">
+            <div class="details-header">
+              <div class="details-title-row">
+                <span id="details-status-dot" class="dot"></span>
+                <h1 id="details-name">project-name</h1>
+                <span id="details-status-text" class="details-status-text">running</span>
+              </div>
+              
+              <div id="details-actions" class="details-actions">
+                <!-- Dynamically populated Config, SSH, Open site, Mailpit, Folder action buttons -->
+              </div>
+              
+              <p id="details-meta" class="details-meta">laravel · /home/erfan/Desktop/clubs</p>
+            </div>
+
+            <div class="details-grid-vertical">
+              <div class="charts-card card">
+                <h3>Resource Usage (Aggregate)</h3>
+                <div class="charts-container">
+                  <div class="chart-box">
+                    <h4>CPU Usage</h4>
+                    <div class="chart-wrapper">
+                      <svg id="cpu-chart" viewBox="0 0 400 150" class="sparkline-chart">
+                        <defs>
+                          <linearGradient id="cpu-grad" x1="0" y1="0" x2="0" y2="1">
+                            <stop offset="0%" stop-color="var(--accent)" stop-opacity="0.45" />
+                            <stop offset="100%" stop-color="var(--accent)" stop-opacity="0.0" />
+                          </linearGradient>
+                        </defs>
+                        <path id="cpu-chart-area" fill="url(#cpu-grad)" d="" />
+                        <path id="cpu-chart-line" fill="none" stroke="var(--accent)" stroke-width="2.5" d="" />
+                      </svg>
+                      <div id="cpu-chart-value" class="chart-value">0%</div>
+                    </div>
+                  </div>
+                  
+                  <div class="chart-box">
+                    <h4>Memory Usage</h4>
+                    <div class="chart-wrapper">
+                      <svg id="mem-chart" viewBox="0 0 400 150" class="sparkline-chart">
+                        <defs>
+                          <linearGradient id="mem-grad" x1="0" y1="0" x2="0" y2="1">
+                            <stop offset="0%" stop-color="var(--green)" stop-opacity="0.45" />
+                            <stop offset="100%" stop-color="var(--green)" stop-opacity="0.0" />
+                          </linearGradient>
+                        </defs>
+                        <path id="mem-chart-area" fill="url(#mem-grad)" d="" />
+                        <path id="mem-chart-line" fill="none" stroke="var(--green)" stroke-width="2.5" d="" />
+                      </svg>
+                      <div id="mem-chart-value" class="chart-value">0%</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="containers-card card">
+                <h3>Docker Containers</h3>
+                <div class="table-responsive">
+                  <table class="containers-table">
+                    <thead>
+                      <tr>
+                        <th>Container</th>
+                        <th>Status</th>
+                        <th>CPU %</th>
+                        <th>Memory</th>
+                        <th>PIDs</th>
+                      </tr>
+                    </thead>
+                    <tbody id="details-containers-list">
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </main>
 
     <dialog id="prefs-dialog" class="prefs-dialog">
@@ -45,6 +135,76 @@
         </menu>
       </form>
     </dialog>
+
+    <dialog id="config-dialog" class="config-dialog">
+      <form method="dialog">
+        <h2 id="config-project-title">Configure Project</h2>
+        <div class="config-grid">
+          <label class="config-row">
+            <span>PHP Version</span>
+            <select id="config-php-version" class="config-select">
+              <option value="8.4">8.4</option>
+              <option value="8.3">8.3</option>
+              <option value="8.2">8.2</option>
+              <option value="8.1">8.1</option>
+              <option value="8.0">8.0</option>
+              <option value="7.4">7.4</option>
+            </select>
+          </label>
+          <label class="config-row">
+            <span>Database Type & Version</span>
+            <select id="config-database" class="config-select">
+              <option value="mariadb:11.8">MariaDB 11.8</option>
+              <option value="mariadb:11.4">MariaDB 11.4</option>
+              <option value="mariadb:10.11">MariaDB 10.11</option>
+              <option value="mariadb:10.8">MariaDB 10.8</option>
+              <option value="mariadb:10.7">MariaDB 10.7</option>
+              <option value="mariadb:10.6">MariaDB 10.6</option>
+              <option value="mariadb:10.5">MariaDB 10.5</option>
+              <option value="mariadb:10.4">MariaDB 10.4</option>
+              <option value="mysql:8.0">MySQL 8.0</option>
+              <option value="mysql:5.7">MySQL 5.7</option>
+              <option value="postgres:16">PostgreSQL 16</option>
+              <option value="postgres:15">PostgreSQL 15</option>
+              <option value="postgres:14">PostgreSQL 14</option>
+              <option value="postgres:13">PostgreSQL 13</option>
+              <option value="postgres:12">PostgreSQL 12</option>
+              <option value="postgres:11">PostgreSQL 11</option>
+              <option value="postgres:10">PostgreSQL 10</option>
+              <option value="postgres:9.6">PostgreSQL 9.6</option>
+            </select>
+          </label>
+          <label class="config-row">
+            <span>Node.js Version</span>
+            <select id="config-nodejs" class="config-select">
+              <option value="24">24</option>
+              <option value="22">22</option>
+              <option value="20">20</option>
+              <option value="18">18</option>
+              <option value="16">16</option>
+              <option value="14">14</option>
+            </select>
+          </label>
+          <label class="config-row">
+            <span>Webserver Type</span>
+            <select id="config-webserver" class="config-select">
+              <option value="nginx-fpm">nginx-fpm</option>
+              <option value="apache-fpm">apache-fpm</option>
+            </select>
+          </label>
+          <label class="config-row checkbox-row">
+            <input type="checkbox" id="config-xdebug" />
+            <span>Enable Xdebug</span>
+          </label>
+        </div>
+        <menu class="config-actions">
+          <button type="button" id="config-save-btn" class="btn btn-primary">Save</button>
+          <button type="button" id="config-save-restart-btn" class="btn btn-primary">Save & Restart</button>
+          <button value="cancel" class="btn btn-ghost">Cancel</button>
+        </menu>
+      </form>
+    </dialog>
+
 
     <script type="module" src="/src/main.ts"></script>
   </body>
